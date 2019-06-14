@@ -221,13 +221,15 @@ class Dashboard extends Component {
 
                 <div className="box-body table-responsive no-padding">
                   <table className="table table-hover">
-                    <tbody>
+                    <thead>
                       <tr>
                         <th width="25%">Name</th>
                         <th width="25%">Role</th>
                         <th width="25%">IP Address</th>
                         <th width="25%">Setting</th>
                       </tr>
+                    </thead>
+                    <tbody>
                       <tr>
                         <td>
                           <span className="flag">
@@ -419,6 +421,17 @@ class Dashboard extends Component {
                   style={{ overflowY: "Auto", height: "380px" }}
                 >
                   <table className="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>ABN</th>
+                        <th>Firm</th>
+                        <th>Fund</th>
+                        <th>Year</th>
+                        <th>Status</th>
+                        <th>User</th>
+                        <th>Setting</th>
+                      </tr>
+                    </thead>
                     <tbody>
                       <tr>
                         <td>9999999999</td>

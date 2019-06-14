@@ -1,19 +1,28 @@
 import React from "react";
 import Form from "../partial/form";
 import Joi from "joi-browser";
-import logo from "../../images/logo.png";
+// import logo from "../../images/logo.png";
 import Aux from "../../hoc/Aux";
-import { Link } from "react-router-dom";
-import login from "../../images/login.png";
+// import { Link } from "react-router-dom";
+// import login from "../../images/login.png";
 class TwoStepverification extends Form {
   state = {
-    data: { otp: "" },
+    data: { one: "", two: "", three: "", four: "" },
     errors: {}
   };
   schema = {
-    otp: Joi.string()
+    one: Joi.string()
       .required()
-      .label("Enter otp")
+      .label("First Number"),
+    two: Joi.string()
+      .required()
+      .label("Second Number"),
+    three: Joi.string()
+      .required()
+      .label("Three Number"),
+    four: Joi.string()
+      .required()
+      .label("Four Number")
   };
 
   doSubmit = () => {
@@ -26,26 +35,25 @@ class TwoStepverification extends Form {
       <Aux>
         <div className="loginCon">
           <div className="col-md-offset-4 col-md-4 line-height-center bg">
-            <div className="login-logo">
-              <Link to="/">
-                <img src={logo} alt="logo" />
-              </Link>
-            </div>
             <div className="login-box-body">
-              <div className="col-md-4">
-                <img
-                  src={login}
-                  alt="logo"
-                  style={{ maxWidth: "100%", marginBottom: 20 }}
+              <div className="col-md-12 text-center">
+                <i
+                  className="fa fa-mobile fa-color tada animated infinite"
+                  aria-hidden="true"
                 />
               </div>
-              <p className="login-box-msg col-md-8" style={{ marginTop: 20 }}>
+              <p className="login-box-msg col-md-12" style={{ marginTop: 20 }}>
                 A Text Message with your code has been sent to: *** *** **55
               </p>
-              <form onSubmit={this.handleSubmit}>
-                {this.renderInput("otp", "", "password")}
-
-                <div className="text-right">{this.renderButton("Login")}</div>
+              <form
+                onSubmit={this.handleSubmit}
+                className="twoStepVerivication"
+              >
+                {this.renderInput("one", "", "password")}
+                {this.renderInput("two", "", "password")}
+                {this.renderInput("three", "", "password")}
+                {this.renderInput("four", "", "password")}
+                <div className="text-right">{this.renderButton("OTP")}</div>
               </form>
             </div>
           </div>
