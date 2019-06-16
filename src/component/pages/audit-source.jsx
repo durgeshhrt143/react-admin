@@ -12,34 +12,6 @@ const AuditSource = props => {
       <section className="content">
         <div className="box">
           <div className="box-body">
-            <div className="row">
-              <div className="col-sm-8">
-                <div className="input-group">
-                  <span className="input-group-addon">
-                    <i className="glyphicon glyphicon-zoom-in" />
-                  </span>
-                  <input
-                    id="search"
-                    style={{ width: "30%" }}
-                    type="text"
-                    className="form-control"
-                    name="search"
-                    placeholder="Search Folder..."
-                  />
-                </div>
-              </div>
-              <div className="col-sm-4">
-                <button
-                  type="button"
-                  className="btn btn-primary pull-right"
-                  data-toggle="modal"
-                  data-target="#folderModal"
-                >
-                  Add New Doc
-                </button>
-              </div>
-            </div>
-            <br />
             <div className="table-responsive">
               <table
                 className="table table-hover tab-bold-head"

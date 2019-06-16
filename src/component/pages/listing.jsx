@@ -8,8 +8,8 @@ const Listing = props => {
   return (
     <Aux>
       <section className="content-header">
-        <h1>Firm(26)</h1>
-        <Breadcrumb breadcrumb="Firm" />
+        <h1>Total Firms(26)</h1>
+        <Breadcrumb breadcrumb="Firms" />
       </section>
       <ul className="list-unstyled listingPage">
         <li className="col-md-3 listCon">
@@ -177,7 +177,6 @@ const Listing = props => {
             </div>
           </div>
         </li>
-      
       </ul>
     </Aux>
   );
